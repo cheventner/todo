@@ -5,7 +5,7 @@
   /**
    * Crée un nouvel objet de stockage côté client
    * et créera une collection vide si aucune collection n'existe déjà.
-   *
+   * @constructor Store
    * @param {string} name The name of our DB we want to use
    * @param {function} callback Our fake DB uses callbacks because in
    * real life you probably would be making AJAX calls
@@ -17,7 +17,7 @@
 
     if (!localStorage[name]) {
       var data = {
-        todos: [],
+        todos: []
       };
 
       localStorage[name] = JSON.stringify(data);
@@ -29,7 +29,7 @@
   /**
    * Recherche des éléments en fonction d'une
    * requête donnée sous la forme d'un objet JS.
-   *
+   * @function Store#find
    * @param {object} query The query to match against (i.e. {foo: 'bar'})
    * @param {function} callback	 The callback to fire when the query has
    * completed running
