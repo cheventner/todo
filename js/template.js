@@ -8,7 +8,7 @@
     ">": "&gt;",
     '"': "&quot;",
     "'": "&#x27;",
-    "`": "&#x60;",
+    "`": "&#x60;"
   };
 
   var escapeHtmlChar = function (chr) {
@@ -97,7 +97,7 @@
   /**
    * Mise à jour du texte du bouton "Effacer les données".
    *
-   * @param  {[type]} completedTodos The number of completed todos.
+   * @param  {number} completedTodos The number of completed todos.
    * @returns {string} String containing the count
    */
   Template.prototype.clearCompletedButton = function (completedTodos) {

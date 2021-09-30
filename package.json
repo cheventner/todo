@@ -1,6 +1,10 @@
 {
   "private": true,
+  "scripts": {
+    "generate": "jsdoc -c jsdoc.json "
+  },
   "dependencies": {
+    "docdash": "^1.2.0",
     "jasmine": "^3.9.0",
     "jshint": "^2.13.1",
     "todomvc-app-css": "^2.0.1",

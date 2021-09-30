@@ -1,13 +1,9 @@
-/**
- * Crée un nouveau contrôleur
- * @class string Controller
- */
 (function (window) {
-  "use strict";
+  ("use strict");
 
   /**
-   * le controller permet d'interagir entre la View et le Model
-   * @constructor
+   * Le controller permet d'interagir entre la View et le Model
+   * @constructor Controller
    * @param {object} model The model instance
    * @param {object} view The view instance
    */
@@ -52,7 +48,7 @@
   /**
    * Charge et initialise la vue ( '' | 'active' | 'completed')
    * @param {string} locationHash peut avoir comme valeur ( '' | 'active' | 'completed')
-   * @function setView
+   * @function Controller#setView
    */
   Controller.prototype.setView = function (locationHash) {
     var route = locationHash.split("/")[1];
@@ -63,7 +59,7 @@
   /**
    * Un événement à déclencher au chargement. Il récupère tous les éléments et
    * les affiche dans la fenêtre todo-list
-   * @function showAll
+   * @function Controller#showAll
    */
   Controller.prototype.showAll = function () {
     var self = this;
@@ -74,7 +70,7 @@
 
   /**
    * Retourne toutes les tâches actives
-   * @function showActive
+   * @function Controller#showActive
    */
   Controller.prototype.showActive = function () {
     var self = this;
@@ -85,7 +81,7 @@
 
   /**
    * Retourne toutes les tâches terminées
-   * @function ShowCompleted
+   * @function Controller#showCompleted
    */
   Controller.prototype.showCompleted = function () {
     var self = this;
@@ -99,7 +95,7 @@
    * Passez simplement l'objet event et il se chargera de l'insertion dans le DOM
    * et de la sauvegarde du nouvel élément.
    *  @param {string} (title) le contenu de la todo
-   * @function addItem
+   * @function Controller#addItem
    */
   Controller.prototype.addItem = function (title) {
     // correction de la faute de frappe
@@ -117,7 +113,7 @@
   /**
    * Déclenche le mode d'édition des éléments.
    * @param {number} (id) L'id de la tâche à éditer
-   * @function editItem
+   * @function Controller#editItem
    */
   Controller.prototype.editItem = function (id) {
     var self = this;
@@ -130,7 +126,7 @@
    * Termine le mode d'édition des éléments et supprime les espaces.
    * @param {*} id  L'id de la tâche éditée, à sauvegarder
    * @param {*} title  le contenu de la todo
-   * @function editItemSave
+   * @function Controller#editItemSave
    */
   Controller.prototype.editItemSave = function (id, title) {
     var self = this;
@@ -149,7 +145,7 @@
   /**
    * Annule le mode d'édition des éléments.
    * @param {*} id  L'id de la tâche éditée, à annuler
-   * @function editItemCancel
+   * @function Controller#editItemCancel
    */
   Controller.prototype.editItemCancel = function (id) {
     var self = this;
@@ -162,7 +158,7 @@
    * En lui donnant un ID, il trouvera l'élément du DOM correspondant à cet ID,
    * le supprimera du DOM et le supprimera également du stockage.
    * @param {number} id L'ID de l'élément à supprimer du DOM et du stockage
-   * @function removeItem
+   * @function Controller#removeItem
    */
   Controller.prototype.removeItem = function (id) {
     var self = this;
@@ -181,7 +177,7 @@
 
   /**
    * Enlèvera tous les éléments terminés du DOM et du stockage.
-   * @function removeCompletedItems
+   * @function Controller#removeCompletedItems
    */
   Controller.prototype.removeCompletedItems = function () {
     var self = this;
@@ -201,14 +197,14 @@
    * @param {number} (id) L'ID de l'élément à compléter ou à retirer
    * @param {object} (checkbox) La case à cocher pour valider le statut de la tache
    * @param {boolean|undefined} silent Empêcher le re-filtrage des éléments de tâche
-   * @function toggleComplete
+   * @function Controller#toggleComplete
    */
   Controller.prototype.toggleComplete = function (id, completed, silent) {
     var self = this;
     self.model.update(id, { completed: completed }, function () {
       self.view.render("elementComplete", {
         id: id,
-        completed: completed,
+        completed: completed
       });
     });
     if (!silent) {
@@ -223,8 +219,8 @@
   /**
    * Basculera l'état activation / désactivation des cases à cocher
    * Il suffit de passer dans l'objet de l'événement.
-   * @param {objetc} (checkbox) case à covher pour valider le choix du statut
-   * @function toggleAll
+   * @param {object} (checkbox) case à cocher pour valider le choix du statut
+   * @function Controller#toggleAll
    */
   Controller.prototype.toggleAll = function (completed) {
     var self = this;
@@ -240,7 +236,7 @@
   /**
    * Met à jour les taches de la page qui changent
    * en fonction du nombre de todos restants.
-   * @function _updateCount
+   * @function Controller#_updateCount
    */
   Controller.prototype._updateCount = function () {
     var self = this;
@@ -248,11 +244,11 @@
       self.view.render("updateElementCount", todos.active);
       self.view.render("clearCompletedButton", {
         completed: todos.completed,
-        visible: todos.completed > 0,
+        visible: todos.completed > 0
       });
 
       self.view.render("toggleAll", {
-        checked: todos.completed === todos.total,
+        checked: todos.completed === todos.total
       });
       self.view.render("contentBlockVisibility", { visible: todos.total > 0 });
     });
@@ -261,7 +257,7 @@
   /**
    * Refiltre les élémentsde la todo, en fonction de route active.
    * @param {boolean|undefined} (force)  refiltre les éléments de la todo.
-   * @function filter
+   * @function Controller#filter
    */
   Controller.prototype._filter = function (force) {
     var activeRoute =
@@ -287,7 +283,7 @@
   /**
    * Met simplement à jour les états sélectionnés de la nav de filtrage
    * @param {string} (currentPage) le filtrage de la page actuelle ('' || active || completed )
-   * @function _updateFilterState
+   * @function Controller#_updateFilterState
    */
   Controller.prototype._updateFilterState = function (currentPage) {
     // Stocke une référence à la route active, ce qui nous permet de re-filtrer les todo
