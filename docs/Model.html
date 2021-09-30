@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>Store - Documentation</title>
+    <title>Model - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -32,7 +32,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">Store</h1>
+    <h1 class="page-title">Model</h1>
     
 
     
@@ -45,7 +45,7 @@
 <header>
     
         <h2>
-        Store
+        Model
         </h2>
         
     
@@ -59,7 +59,7 @@
 
     
 
-    <h4 class="name" id="Store"><span class="type-signature"></span>new Store<span class="signature">(name, callback)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="Model"><span class="type-signature"></span>new Model<span class="signature">(storage)</span><span class="type-signature"></span></h4>
 
     
 
@@ -71,7 +71,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="store.js.html">store.js</a>, <a href="store.js.html#line4">line 4</a>
+        <a href="model.js.html">model.js</a>, <a href="model.js.html#line4">line 4</a>
     </li></ul></dd>
     
 
@@ -111,8 +111,7 @@
 
 
 <div class="description usertext">
-    Crée un nouvel objet de stockage côté client
-et créera une collection vide si aucune collection n'existe déjà.
+    Crée une nouvelle instance de modèle et lie le stockage coté client.
 </div>
 
 
@@ -150,13 +149,13 @@ et créera une collection vide si aucune collection n'existe déjà.
 
         <tr>
             
-                <td class="name"><code>name</code></td>
+                <td class="name"><code>storage</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">string</span>
+<span class="param-type">object</span>
 
 
             
@@ -166,30 +165,7 @@ et créera une collection vide si aucune collection n'existe déjà.
 
             
 
-            <td class="description last">Le nom de la DB que nous voulons utiliser</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>callback</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">function</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">Fonction de rappel (Notre fausse DB utilise des callbacks)</td>
+            <td class="description last">Une référence à la classe de stockage côté client <a href="Store.html">Store</a>.</td>
         </tr>
 
     
@@ -240,7 +216,7 @@ et créera une collection vide si aucune collection n'existe déjà.
 
     
 
-    <h4 class="name" id="drop"><span class="type-signature"></span>drop<span class="signature">(callback)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="create"><span class="type-signature"></span>create<span class="signature">(title, callback)</span><span class="type-signature"></span></h4>
 
     
 
@@ -252,7 +228,7 @@ et créera une collection vide si aucune collection n'existe déjà.
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="store.js.html">store.js</a>, <a href="store.js.html#line131">line 131</a>
+        <a href="model.js.html">model.js</a>, <a href="model.js.html#line13">line 13</a>
     </li></ul></dd>
     
 
@@ -292,7 +268,166 @@ et créera une collection vide si aucune collection n'existe déjà.
 
 
 <div class="description usertext">
-    Vide et commence un nouveau stockage.
+    Crée un nouveau Model de TODO.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>title</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Le titre de la tâche.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Le callback à lancer après la création du modèle.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="getCount"><span class="type-signature"></span>getCount<span class="signature">(callback)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="model.js.html">model.js</a>, <a href="model.js.html#line90">line 90</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    Retourne un compte de tous les TODOS
 </div>
 
 
@@ -346,7 +481,7 @@ et créera une collection vide si aucune collection n'existe déjà.
 
             
 
-            <td class="description last">Le callback à lancer après avoir déposé les données.</td>
+            <td class="description last"></td>
         </tr>
 
     
@@ -376,7 +511,7 @@ et créera une collection vide si aucune collection n'existe déjà.
 
     
 
-    <h4 class="name" id="find"><span class="type-signature"></span>find<span class="signature">(query, callback)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="read"><span class="type-signature"></span>read<span class="signature">(query, callback)</span><span class="type-signature"></span></h4>
 
     
 
@@ -388,7 +523,7 @@ et créera une collection vide si aucune collection n'existe déjà.
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="store.js.html">store.js</a>, <a href="store.js.html#line27">line 27</a>
+        <a href="model.js.html">model.js</a>, <a href="model.js.html#line31">line 31</a>
     </li></ul></dd>
     
 
@@ -428,7 +563,9 @@ et créera une collection vide si aucune collection n'existe déjà.
 
 
 <div class="description usertext">
-    Recherche des éléments en fonction d'une requête donnée sous la forme d'un objet JS.
+    Trouve et retourne un modèle en stockage.Si aucune requête n'est donnée, il va simplement
+tout retourner.Si on passe dans une chaîne ou un numéro, cela ressemblera à
+l'identifiant du modèle à trouver.On peut lui transmettre un objet.
 </div>
 
 
@@ -441,10 +578,10 @@ et créera une collection vide si aucune collection n'existe déjà.
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>db.find({foo: 'bar', hello: 'world'}, function (data) {
-	 data will return any items that have foo: bar and
-	 hello: world in their properties
-});</code></pre>
+    <pre class="prettyprint"><code>model.read(1, func); // Trouvera le modèle avec un ID de 1
+model.read('1'); // Même chose que ci-dessus.
+Ci-dessous un exemple avec foo égalant bar et hello égalant world..
+model.read({ foo: 'bar', hello: 'world' });</code></pre>
 
 
 
@@ -480,6 +617,12 @@ et créera une collection vide si aucune collection n'existe déjà.
             <td class="type">
             
                 
+<span class="param-type">string</span>
+|
+
+<span class="param-type">number</span>
+|
+
 <span class="param-type">object</span>
 
 
@@ -490,7 +633,7 @@ et créera une collection vide si aucune collection n'existe déjà.
 
             
 
-            <td class="description last">La requête à comparer (i.e. {foo: 'bar'})</td>
+            <td class="description last">Une requête pour comparer les modèles.</td>
         </tr>
 
     
@@ -513,144 +656,7 @@ et créera une collection vide si aucune collection n'existe déjà.
 
             
 
-            <td class="description last">Le callback à lancer lorsque la requête a
-terminé l'exécution.</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="findAll"><span class="type-signature"></span>findAll<span class="signature">(callback)</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="store.js.html">store.js</a>, <a href="store.js.html#line57">line 57</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description usertext">
-    Récupére toutes les données de la collection
-</div>
-
-
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>callback</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">function</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">Récupération des données avec la fonction de rappel</td>
+            <td class="description last">Le callback à lancer après que le modèle soit trouvé</td>
         </tr>
 
     
@@ -692,7 +698,7 @@ terminé l'exécution.</td>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="store.js.html">store.js</a>, <a href="store.js.html#line104">line 104</a>
+        <a href="model.js.html">model.js</a>, <a href="model.js.html#line71">line 71</a>
     </li></ul></dd>
     
 
@@ -732,7 +738,7 @@ terminé l'exécution.</td>
 
 
 <div class="description usertext">
-    Retire un article du magasin en fonction de son ID.
+    Supprime un modèle de stockage
 </div>
 
 
@@ -786,7 +792,7 @@ terminé l'exécution.</td>
 
             
 
-            <td class="description last">L'ID de l'élément à supprimer.</td>
+            <td class="description last">L'ID du modèle à supprimer</td>
         </tr>
 
     
@@ -809,7 +815,7 @@ terminé l'exécution.</td>
 
             
 
-            <td class="description last">Le callback à lancer après la sauvegarde.</td>
+            <td class="description last">La fonction de rappel à lancer lorsque la suppression est terminée.</td>
         </tr>
 
     
@@ -839,7 +845,7 @@ terminé l'exécution.</td>
 
     
 
-    <h4 class="name" id="save"><span class="type-signature"></span>save<span class="signature">(updateData, callback, id)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="removeAll"><span class="type-signature"></span>removeAll<span class="signature">(callback)</span><span class="type-signature"></span></h4>
 
     
 
@@ -851,7 +857,7 @@ terminé l'exécution.</td>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="store.js.html">store.js</a>, <a href="store.js.html#line67">line 67</a>
+        <a href="model.js.html">model.js</a>, <a href="model.js.html#line81">line 81</a>
     </li></ul></dd>
     
 
@@ -891,8 +897,7 @@ terminé l'exécution.</td>
 
 
 <div class="description usertext">
-    Sauve les données dans DB. Si aucun élément n'existe, il crée un nouvel
-article, sinon il mettra simplement à jour les propriétés de l'élément existant
+    WARNING: Supprimera toutes les données du stockage.
 </div>
 
 
@@ -930,7 +935,167 @@ article, sinon il mettra simplement à jour les propriétés de l'élément exis
 
         <tr>
             
-                <td class="name"><code>updateData</code></td>
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Le rappel à déclencher lorsque le stockage est effacé.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="update"><span class="type-signature"></span>update<span class="signature">(id, data, callback)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="model.js.html">model.js</a>, <a href="model.js.html#line59">line 59</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    Met à jour un modèle en lui donnant un ID, des données et un callback lorsque
+la mise à jour est complète.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">L'identifiant du modèle à mettre à jour.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>data</code></td>
             
 
             <td class="type">
@@ -946,7 +1111,7 @@ article, sinon il mettra simplement à jour les propriétés de l'élément exis
 
             
 
-            <td class="description last">Les données à sauvegarder dans la DB</td>
+            <td class="description last">Les propriétés à mettre à jour et leur nouvelle valeur.</td>
         </tr>
 
     
@@ -969,30 +1134,7 @@ article, sinon il mettra simplement à jour les propriétés de l'élément exis
 
             
 
-            <td class="description last">Le callback à lancer après la sauvegarde</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>id</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">Un paramètre facultatif pour entrer l'ID d'un élément à mettre à jour.</td>
+            <td class="description last">La fonction de rappel à lancer lorsque la mise à jour est terminée.</td>
         </tr>
 
     

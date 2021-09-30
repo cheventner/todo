@@ -2,20 +2,19 @@
   "use strict";
 
   /**
-   * Crée une nouvelle instance de modèle et raccroche le stockage.
-   *
-   * @constructor
-   * @param {object} storage Une référence à la classe de stockage côté client
+   * Crée une nouvelle instance de modèle et lie le stockage coté client.
+   * @constructor Model
+   * @param {object} storage Une référence à la classe de stockage côté client {@link Store}.
    */
   function Model(storage) {
     this.storage = storage;
   }
 
   /**
-   * Crée un nouveau modèle TODO
-   *
-   * @param {string} [title] The title of the task
-   * @param {function} [callback] The callback to fire after the model is created
+   * Crée un nouveau Model de TODO.
+   *   @param {string} title Le titre de la tâche.
+   * @param {function} callback Le callback à lancer après la création du modèle.
+   * @function Model#create
    */
   Model.prototype.create = function (title, callback) {
     title = title || "";
@@ -30,18 +29,16 @@
   };
 
   /**
-   * Trouve et retourne un modèle en stockage.Si aucune requête n'est donnée, ça va simplement
-   * retournez tout.Si vous passez dans une chaîne ou un numéro, il semblerait que ce soit comme
-   * l'identifiant du modèle à trouver.Enfin, vous pouvez transmettre un objet pour correspondre
-   * contre.
-   *
-   * @param {string|number|object} [query] A query to match models against
-   * @param {function} [callback] The callback to fire after the model is found
-   *
-   * @example
-   * model.read(1, func); // Will find the model with an ID of 1
-   * model.read('1'); // Same as above
-   * //Below will find a model with foo equalling bar and hello equalling world.
+   * Trouve et retourne un modèle en stockage.Si aucune requête n'est donnée, il va simplement
+   * tout retourner.Si on passe dans une chaîne ou un numéro, cela ressemblera à
+   * l'identifiant du modèle à trouver.On peut lui transmettre un objet.
+   * @param {string|number|object} query Une requête pour comparer les modèles.
+   * @param {function} callback Le callback à lancer après que le modèle soit trouvé
+   * @function Model#read
+   *  @example
+   * model.read(1, func); // Trouvera le modèle avec un ID de 1
+   * model.read('1'); // Même chose que ci-dessus.
+   * Ci-dessous un exemple avec foo égalant bar et hello égalant world..
    * model.read({ foo: 'bar', hello: 'world' });
    */
   Model.prototype.read = function (query, callback) {
@@ -60,12 +57,12 @@
   };
 
   /**
-   * Met à jour un modèle en lui donnant un identifiant, des données à mettre à jour et un rappel au feu lorsque et un rappel au feu lorsque
+   * Met à jour un modèle en lui donnant un ID, des données et un callback lorsque
    * la mise à jour est complète.
-   *
-   * @param {number} id L'identifiant du modèle à mettre à jour
-   * @param {object} data The properties to update and their new value
-   * @param {function} callback The callback to fire when the update is complete.
+   * @param {number} id L'identifiant du modèle à mettre à jour.
+   * @param {object} data Les propriétés à mettre à jour et leur nouvelle valeur.
+   * @param {function} callback La fonction de rappel à lancer lorsque la mise à jour est terminée.
+   * @function Model#update
    */
   Model.prototype.update = function (id, data, callback) {
     this.storage.save(data, callback, id);
@@ -73,9 +70,9 @@
 
   /**
    * Supprime un modèle de stockage
-   *
-   * @param {number} id The ID of the model to remove
-   * @param {function} callback The callback to fire when the removal is complete.
+   * @param {number} id L'ID du modèle à supprimer
+   * @param {function} callback La fonction de rappel à lancer lorsque la suppression est terminée.
+   * @function Model#remove
    */
   Model.prototype.remove = function (id, callback) {
     this.storage.remove(id, callback);
@@ -83,16 +80,17 @@
 
   /**
    * WARNING: Supprimera toutes les données du stockage.
-   *
-   * @param {function} callback The callback to fire when the storage is wiped.
+   * @param {function} callback Le rappel à déclencher lorsque le stockage est effacé.
+   * @function Model#removeAll
    */
   Model.prototype.removeAll = function (callback) {
     this.storage.drop(callback);
   };
 
   /**
-   * Returns a count of all todos
    * Retourne un compte de tous les TODOS
+   * @param {function} callback
+   * @function Model#getCount
    */
   Model.prototype.getCount = function (callback) {
     var todos = {

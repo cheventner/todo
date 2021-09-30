@@ -27,7 +27,7 @@
 
 <nav >
     
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Controller.html">Controller</a><ul class='methods'><li data-type='method'><a href="Controller.html#_updateCount">_updateCount</a></li><li data-type='method'><a href="Controller.html#_updateFilterState">_updateFilterState</a></li><li data-type='method'><a href="Controller.html#addItem">addItem</a></li><li data-type='method'><a href="Controller.html#editItem">editItem</a></li><li data-type='method'><a href="Controller.html#editItemCancel">editItemCancel</a></li><li data-type='method'><a href="Controller.html#editItemSave">editItemSave</a></li><li data-type='method'><a href="Controller.html#filter">filter</a></li><li data-type='method'><a href="Controller.html#removeCompletedItems">removeCompletedItems</a></li><li data-type='method'><a href="Controller.html#removeItem">removeItem</a></li><li data-type='method'><a href="Controller.html#setView">setView</a></li><li data-type='method'><a href="Controller.html#showActive">showActive</a></li><li data-type='method'><a href="Controller.html#showAll">showAll</a></li><li data-type='method'><a href="Controller.html#showCompleted">showCompleted</a></li><li data-type='method'><a href="Controller.html#toggleAll">toggleAll</a></li><li data-type='method'><a href="Controller.html#toggleComplete">toggleComplete</a></li></ul></li><li><a href="Store.html">Store</a><ul class='methods'><li data-type='method'><a href="Store.html#find">find</a></li></ul></li><li><a href="Todo.html">Todo</a></li></ul><h3>Namespaces</h3><ul><li><a href="App.html">App</a><ul class='methods'><li data-type='method'><a href="App.html#setView">setView</a></li></ul></li></ul><h3>Global</h3><ul><li><a href="global.html#$delegate">$delegate</a></li><li><a href="global.html#$on">$on</a></li><li><a href="global.html#$parent">$parent</a></li><li><a href="global.html#qs">qs</a></li><li><a href="global.html#qsa">qsa</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Controller.html">Controller</a><ul class='methods'><li data-type='method'><a href="Controller.html#_updateCount">_updateCount</a></li><li data-type='method'><a href="Controller.html#_updateFilterState">_updateFilterState</a></li><li data-type='method'><a href="Controller.html#addItem">addItem</a></li><li data-type='method'><a href="Controller.html#editItem">editItem</a></li><li data-type='method'><a href="Controller.html#editItemCancel">editItemCancel</a></li><li data-type='method'><a href="Controller.html#editItemSave">editItemSave</a></li><li data-type='method'><a href="Controller.html#filter">filter</a></li><li data-type='method'><a href="Controller.html#removeCompletedItems">removeCompletedItems</a></li><li data-type='method'><a href="Controller.html#removeItem">removeItem</a></li><li data-type='method'><a href="Controller.html#setView">setView</a></li><li data-type='method'><a href="Controller.html#showActive">showActive</a></li><li data-type='method'><a href="Controller.html#showAll">showAll</a></li><li data-type='method'><a href="Controller.html#showCompleted">showCompleted</a></li><li data-type='method'><a href="Controller.html#toggleAll">toggleAll</a></li><li data-type='method'><a href="Controller.html#toggleComplete">toggleComplete</a></li></ul></li><li><a href="Model.html">Model</a><ul class='methods'><li data-type='method'><a href="Model.html#create">create</a></li><li data-type='method'><a href="Model.html#getCount">getCount</a></li><li data-type='method'><a href="Model.html#read">read</a></li><li data-type='method'><a href="Model.html#remove">remove</a></li><li data-type='method'><a href="Model.html#removeAll">removeAll</a></li><li data-type='method'><a href="Model.html#update">update</a></li></ul></li><li><a href="Store.html">Store</a><ul class='methods'><li data-type='method'><a href="Store.html#drop">drop</a></li><li data-type='method'><a href="Store.html#find">find</a></li><li data-type='method'><a href="Store.html#findAll">findAll</a></li><li data-type='method'><a href="Store.html#remove">remove</a></li><li data-type='method'><a href="Store.html#save">save</a></li></ul></li><li><a href="Todo.html">Todo</a></li></ul><h3>Namespaces</h3><ul><li><a href="App.html">App</a><ul class='methods'><li data-type='method'><a href="App.html#setView">setView</a></li></ul></li><li><a href="Helpers.html">Helpers</a><ul class='methods'><li data-type='method'><a href="Helpers.html#$on">$on</a></li><li data-type='method'><a href="Helpers.html#$parent">$parent</a></li><li data-type='method'><a href="Helpers.html#delegate">delegate</a></li><li data-type='method'><a href="Helpers.html#qs">qs</a></li><li data-type='method'><a href="Helpers.html#qsa">qsa</a></li></ul></li></ul>
 </nav>
 
 <div id="main">
@@ -42,55 +42,52 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>/*global NodeList */
+            <pre class="prettyprint source linenums"><code>/** @namespace  Helpers*/
+/*global NodeList */
 (function (window) {
   "use strict";
 
   /**
-   *Obtenir un élément(s) par un sélecteur class CSS
-   Utiliser dans {@link View}.
-   @function qs
-     */
-
+   * Obtenir un élément(s) par un sélecteur class CSS.
+   * Utiliser dans {@link View}.
+   *@function Helpers#qs
+   */
   window.qs = function (selector, scope) {
     return (scope || document).querySelector(selector);
   };
 
   /**
-   * Récupère un tableau des éléments par un sélecteur class CSS
-   * @function qsa
+   * Récupère un tableau des éléments en fonction de leur class CSS
+   *  Utiliser dans {@link View}.
+   * @function Helpers#qsa
    */
   window.qsa = function (selector, scope) {
     return (scope || document).querySelectorAll(selector);
   };
 
   /**
-   * Contenu addEventListener.
-   * Utiliser dans {@link View}.
-   * Utiliser dans {@link App}.
-   * @param {Object} (target) la cible
-   * @param {Bolean} (type) blur ou focus
-   * @param {Function} (callback) function de rappel
-   * @param {Object} (useCapture) l'élément capturé
-   * @function $on
+   * Contenu des addEventListener.
+   * Utiliser dans {@link View} et {@link App}
+   * @param {Object} target la cible
+   * @param {Bolean} type blur ou focus
+   * @param {Function} callback function de rappel
+   * @param {Object} useCapture l'élément capturé
+   * @function Helpers#$on
    */
 
   window.$on = function (target, type, callback, useCapture) {
     target.addEventListener(type, callback, !!useCapture);
   };
 
-  // Attache un gestionnaire à l'événement pour tous les éléments qui correspondent au sélecteur,
-  // maintenant ou dans le futur, sur la base d'un élément parent.
-
   /**
+   * Attache un gestionnaire à l'événement pour tous les éléments qui correspondent au sélecteur, sur la base d'un élément parent.
    *  Utiliser dans {@link View}.
-   * @param {Object} (target) la cible
-   * @param {Function} (selector) vérifie la correspondance entre enfants et parents
-   * @param {Bolean} (type) le type d'évènenement
-   * @param {Function} (handler) si la condition est remplie, le callback s'execute
-   * @function $delegate
+   * @param {Object} target la cible
+   * @param {Function} selector vérifie la correspondance entre enfants et parents
+   * @param {Bolean} type le type d'évènenement
+   * @param {Function} handler si la condition est remplie, le callback s'execute
+   * @function Helpers#delegate
    */
-
   window.$delegate = function (target, selector, type, handler) {
     function dispatchEvent(event) {
       var targetElement = event.target;
@@ -103,18 +100,21 @@
       }
     }
 
-    // https://developer.mozilla.org/en-US/docs/Web/Events/blur
+    /**
+     * @doc https://developer.mozilla.org/en-US/docs/Web/Events/blur
+     * @type {Bolean}
+     */
     var useCapture = type === "blur" || type === "focus";
 
     window.$on(target, type, dispatchEvent, useCapture);
   };
 
   /**
-   *Trouvez le parent de l'élément avec le nom de balise donné: $parent(qs('a'), 'div');
-   *Utiliser dans {@link View}.
+   * Trouvez le parent de l'élément avec le nom de balise donné: $parent(qs('a'), 'div');
+   * Utiliser dans {@link View}.
    * @param {Object} (element) l'élément actif
    * @param {string} (tagName) le tagName de l'élémnent
-   * @function $parent
+   * @function Helpers#$parent
    */
 
   window.$parent = function (element, tagName) {
@@ -146,7 +146,7 @@
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a> on Thu Sep 30 2021 15:49:40 GMT+0200 (Central European Summer Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a> on Thu Sep 30 2021 18:09:37 GMT+0200 (heure d’été d’Europe centrale) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
 <script>prettyPrint();</script>
