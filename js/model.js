@@ -1,3 +1,6 @@
+/**
+ * @class Model
+ */
 (function (window) {
   "use strict";
 
@@ -5,6 +8,7 @@
    * Crée une nouvelle instance de modèle et lie le stockage coté client.
    * @constructor Model
    * @param {object} storage Une référence à la classe de stockage côté client {@link Store}.
+   * @function Model#model
    */
   function Model(storage) {
     this.storage = storage;
@@ -12,7 +16,7 @@
 
   /**
    * Crée un nouveau Model de TODO.
-   *   @param {string} title Le titre de la tâche.
+   * @param {string} title Le titre de la tâche.
    * @param {function} callback Le callback à lancer après la création du modèle.
    * @function Model#create
    */
@@ -113,7 +117,7 @@
     });
   };
 
-  // Export to window
+  // Export vers la window
   window.app = window.app || {};
   window.app.Model = Model;
 })(window);

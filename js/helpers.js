@@ -57,7 +57,7 @@
     }
 
     /**
-     * @doc https://developer.mozilla.org/en-US/docs/Web/Events/blur
+     * {@link https://developer.mozilla.org/en-US/docs/Web/Events/blur}
      * @type {Bolean}
      */
     var useCapture = type === "blur" || type === "focus";

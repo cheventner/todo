@@ -1,4 +1,8 @@
-/*jshint laxbreak:true */
+/**
+ * Crée un nouveau template
+ * @class Template
+ */
+
 (function (window) {
   "use strict";
 
@@ -8,7 +12,7 @@
     ">": "&gt;",
     '"': "&quot;",
     "'": "&#x27;",
-    "`": "&#x60;"
+    "`": "&#x60;",
   };
 
   var escapeHtmlChar = function (chr) {
@@ -25,10 +29,9 @@
   };
 
   /**
-   * Définit des valeurs par défaut pour toutes les méthodes de modèle, comme un modèle par défaut.
-   *
-   * @constructor
-   */
+   * Définit les valeurs par défaut du template.
+   *@function Template#template
+   *   */
   function Template() {
     this.defaultTemplate =
       '<li data-id="{{id}}" class="{{completed}}">' +
@@ -41,21 +44,17 @@
   }
 
   /**
-   * Crée une chaîne HTML <li> et la renvoie pour qu'elle soit placée dans votre application.
-   *
-   * NOTE: Dans la vie réelle, vous devriez utiliser un moteur de templating tel que Mustache
-   * ou Handlebars, mais il s'agit ici d'un exemple de vanilla JS.
-   *
-   * @param {object} data L'objet contenant les clés que vous voulez trouver dans le
+   * Crée une chaîne HTML <li> et la renvoie pour qu'elle soit placée dans l'application.
+   * @param {object} data L'objet contenant les clés que l'on veut trouver dans le
    * 											modèle à remplacer.
    * @returns {string} Chaîne HTML d'un élément <li>
-   *
    * @example
    * view.show({
    *	id: 1,
    *	title: "Hello World",
    *	completed: 0,
    * });
+   * @function Template#show
    */
   Template.prototype.show = function (data) {
     var i, l;
@@ -84,9 +83,9 @@
 
   /**
    * Affiche un compteur du nombre de tâches à accomplir.
-   *
-   * @param {number} activeTodos The number of active todos.
-   * @returns {string} String containing the count
+   * @param {number} activeTodos Le nombre de todos actives.
+   * @returns {string} Chaîne contenant le nombre.
+   * @function Template#itemCounter
    */
   Template.prototype.itemCounter = function (activeTodos) {
     var plural = activeTodos === 1 ? "" : "s";
@@ -95,10 +94,10 @@
   };
 
   /**
-   * Mise à jour du texte du bouton "Effacer les données".
-   *
-   * @param  {number} completedTodos The number of completed todos.
-   * @returns {string} String containing the count
+   * Mise à jour du texte du bouton "Clear completed".
+   * @param  {number} completedTodos Le nombre de todos terminées.
+   * @returns {string} Chaîne contenant le compte.
+   * @function Template#clearCompletedButton
    */
   Template.prototype.clearCompletedButton = function (completedTodos) {
     if (completedTodos > 0) {
@@ -108,7 +107,7 @@
     }
   };
 
-  // Export to window
+  // Export vers la window
   window.app = window.app || {};
   window.app.Template = Template;
 })(window);

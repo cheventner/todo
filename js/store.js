@@ -139,7 +139,7 @@
     callback.call(this, data.todos);
   };
 
-  // Exporte vers la window
+  // Export vers la window
   window.app = window.app || {};
   window.app.Store = Store;
 })(window);
