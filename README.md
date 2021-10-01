@@ -14,12 +14,14 @@ Ces tests unitaires ont été réalisés selon la méthode TDD ( Test Driven Dev
 </p>
 <h3>2-3 Architecture </h3>
 <p>
-Cette application a été developpée à l'aide du modèle MVC (Model-View-Controller ou Modèle-Vue-Contrôleur) Il met l'accent sur la séparation entre la logique métier et l'affichage du logiciel.
+Cette application a été developpée à l'aide du modèle MVC (Model-View-Controller ou Modèle-Vue-Contrôleur) Il met l'accent sur la séparation entre la logique métier et l'affichage l'application.
 </p>
-<img src="file://./img/schema_mvc.png" raw=true
-alt=“Schéma-MVC Pronouns”
-style=“margin-right: 10px;”/>
 
-![test image](./img/schema_mvc.png)
+![Schéma-MVC](https://blogdummi.fr/wp-content/uploads/2019/01/schema-general-architecture-mvc.png)
 
-)
+<h3>2-4 Stockage </h3>
+<p>
+Le stockage de la liste des tâches sera sauvegardé chez l'utilisateur en local. Cette liste ne pourra pas être utilisé sur un autre support. Si l'utilisateur vide le cache du navigateur, la liste n'existera plus.
+</p>
+<br>
+<br>
