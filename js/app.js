@@ -4,7 +4,7 @@
  * @namespace App
  */
 (function () {
-  ("use strict");
+  "use strict";
 
   /**
    * Crée une liste de todo
