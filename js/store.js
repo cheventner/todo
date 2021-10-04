@@ -37,21 +37,22 @@
    * });
    */
   Store.prototype.find = function (query, callback) {
-    if (callback) {
-      var todos = JSON.parse(localStorage[this._dbName]).todos;
-
-      callback.call(
-        this,
-        todos.filter(function (todo) {
-          for (var q in query) {
-            if (query[q] !== todo[q]) {
-              return false;
-            }
-          }
-          return true;
-        })
-      );
+    if (!callback) {
+      return;
     }
+    var todos = JSON.parse(localStorage[this._dbName]).todos;
+
+    callback.call(
+      this,
+      todos.filter(function (todo) {
+        for (var q in query) {
+          if (query[q] !== todo[q]) {
+            return false;
+          }
+        }
+        return true;
+      })
+    );
   };
 
   /**
