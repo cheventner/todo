@@ -1,5 +1,5 @@
 (function (window) {
-  ("use strict");
+  "use strict";
 
   /**
    * Le controller permet d'interagir entre la View et le Model
@@ -204,7 +204,7 @@
     self.model.update(id, { completed: completed }, function () {
       self.view.render("elementComplete", {
         id: id,
-        completed: completed
+        completed: completed,
       });
     });
     if (!silent) {
@@ -244,11 +244,11 @@
       self.view.render("updateElementCount", todos.active);
       self.view.render("clearCompletedButton", {
         completed: todos.completed,
-        visible: todos.completed > 0
+        visible: todos.completed > 0,
       });
 
       self.view.render("toggleAll", {
-        checked: todos.completed === todos.total
+        checked: todos.completed === todos.total,
       });
       self.view.render("contentBlockVisibility", { visible: todos.total > 0 });
     });
