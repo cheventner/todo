@@ -1,8 +1,8 @@
-<h1 style="text-align: center; border: 1px solid purple;color:purple">Todo List</h1>
+<h1 style="text-align: center; border: 1px solid purple;color:purple">Todos</h1>
 <h2 style="text-align: center; border: 1 solid red">Documentation Technique</h2>
 <!--------------------------------- 1 Présentation du projet --------------------------->
 <h2 style="text-decoration: underline; color:purple"> <strong>1 Présentation du projet </strong></h2>
-<p>Todo List est une application simple et efficace, qui permet de créer et gérer des listes de tâches à effectuer. Une fois la tâche créée, elle peut être modifiée ou supprimée définitivement. Un filtre permet de choisir le type de tâche à afficher ( "toute(s)" | active(s) | complétée(s). Tant que l'utilisateur n'efface pas le cache du navigateur, la liste des tâches restera accessible. L'utilisateur ne pourra y avoir accès qu'à partir du support sur lequel cette liste a été crée.</p>
+<p>Todos est une application simple et efficace, qui permet de créer et gérer des listes de tâches à effectuer. Une fois la tâche créée, elle peut être modifiée ou supprimée définitivement. Un filtre permet de choisir le type de tâche à afficher ( "toute(s)" | active(s) | complétée(s). Tant que l'utilisateur n'efface pas le cache du navigateur, la liste des tâches restera accessible. L'utilisateur ne pourra y avoir accès qu'à partir du support sur lequel cette liste a été crée.</p>
 <p align="center">
 <img src="https://raw.githubusercontent.com/cheventner/todo/main/img/usercase.png" style="width : 400px">
 </p>
