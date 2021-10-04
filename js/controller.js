@@ -103,11 +103,12 @@
     var self = this;
 
     if (title.trim() !== "") {
-      self.model.create(title, function () {
-        self.view.render("clearNewTodo");
-        self._filter(true);
-      });
+      return;
     }
+    self.model.create(title, function () {
+      self.view.render("clearNewTodo");
+      self._filter(true);
+    });
   };
 
   /**
