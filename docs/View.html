@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>Model - Documentation</title>
+    <title>View - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -32,7 +32,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">Model</h1>
+    <h1 class="page-title">View</h1>
     
 
     
@@ -45,7 +45,7 @@
 <header>
     
         <h2>
-        Model
+        View
         </h2>
         
     
@@ -59,7 +59,7 @@
 
     
 
-    <h4 class="name" id="Model"><span class="type-signature"></span>new Model<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="View"><span class="type-signature"></span>new View<span class="signature">()</span><span class="type-signature"></span></h4>
 
     
 
@@ -71,7 +71,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="model.js.html">model.js</a>, <a href="model.js.html#line1">line 1</a>
+        <a href="view.js.html">view.js</a>, <a href="view.js.html#line2">line 2</a>
     </li></ul></dd>
     
 
@@ -163,7 +163,7 @@
 
     
 
-    <h4 class="name" id="create"><span class="type-signature"></span>create<span class="signature">(title, callback)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="_bindItemEditCancel"><span class="type-signature"></span>_bindItemEditCancel<span class="signature">(handler)</span><span class="type-signature"></span></h4>
 
     
 
@@ -175,7 +175,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="model.js.html">model.js</a>, <a href="model.js.html#line17">line 17</a>
+        <a href="view.js.html">view.js</a>, <a href="view.js.html#line214">line 214</a>
     </li></ul></dd>
     
 
@@ -215,7 +215,7 @@
 
 
 <div class="description usertext">
-    Crée un nouveau Model de TODO.
+    Désactive l'affichage de l'édition de l'élément lorsqu'il est annulé
 </div>
 
 
@@ -253,166 +253,7 @@
 
         <tr>
             
-                <td class="name"><code>title</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">Le titre de la tâche.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>callback</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">function</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">Le callback à lancer après la création du modèle.</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="getCount"><span class="type-signature"></span>getCount<span class="signature">(callback)</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="model.js.html">model.js</a>, <a href="model.js.html#line94">line 94</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description usertext">
-    Retourne un compte de tous les TODOS
-</div>
-
-
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>callback</code></td>
+                <td class="name"><code>handler</code></td>
             
 
             <td class="type">
@@ -458,7 +299,7 @@
 
     
 
-    <h4 class="name" id="model"><span class="type-signature"></span>model<span class="signature">(storage)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="_bindItemEditDone"><span class="type-signature"></span>_bindItemEditDone<span class="signature">(handler)</span><span class="type-signature"></span></h4>
 
     
 
@@ -470,7 +311,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="model.js.html">model.js</a>, <a href="model.js.html#line7">line 7</a>
+        <a href="view.js.html">view.js</a>, <a href="view.js.html#line189">line 189</a>
     </li></ul></dd>
     
 
@@ -510,7 +351,7 @@
 
 
 <div class="description usertext">
-    Crée une nouvelle instance de modèle et lie le stockage coté client.
+    Désactive l'affichage de l'édition de l'élément lorsqu'il est validé
 </div>
 
 
@@ -548,13 +389,13 @@
 
         <tr>
             
-                <td class="name"><code>storage</code></td>
+                <td class="name"><code>handler</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">object</span>
+<span class="param-type">function</span>
 
 
             
@@ -564,7 +405,7 @@
 
             
 
-            <td class="description last">Une référence à la classe de stockage côté client <a href="Store.html">Store</a>.</td>
+            <td class="description last"></td>
         </tr>
 
     
@@ -594,7 +435,7 @@
 
     
 
-    <h4 class="name" id="read"><span class="type-signature"></span>read<span class="signature">(query, callback)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="_clearCompletedButton"><span class="type-signature"></span>_clearCompletedButton<span class="signature">(completedCount, visible)</span><span class="type-signature"></span></h4>
 
     
 
@@ -606,7 +447,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="model.js.html">model.js</a>, <a href="model.js.html#line35">line 35</a>
+        <a href="view.js.html">view.js</a>, <a href="view.js.html#line43">line 43</a>
     </li></ul></dd>
     
 
@@ -646,9 +487,7 @@
 
 
 <div class="description usertext">
-    Trouve et retourne un modèle en stockage.Si aucune requête n'est donnée, il va simplement
-tout retourner.Si on passe dans une chaîne ou un numéro, cela ressemblera à
-l'identifiant du modèle à trouver.On peut lui transmettre un objet.
+    Effacer les éléments terminés de la vue
 </div>
 
 
@@ -657,14 +496,6 @@ l'identifiant du modèle à trouver.On peut lui transmettre un objet.
 
 
 
-
-
-    <h5>Example</h5>
-    
-    <pre class="prettyprint"><code>model.read(1, func); // Trouvera le modèle avec un ID de 1
-model.read('1'); // Même chose que ci-dessus.
-Ci-dessous un exemple avec foo égalant bar et hello égalant world..
-model.read({ foo: 'bar', hello: 'world' });</code></pre>
 
 
 
@@ -694,19 +525,195 @@ model.read({ foo: 'bar', hello: 'world' });</code></pre>
 
         <tr>
             
-                <td class="name"><code>query</code></td>
+                <td class="name"><code>completedCount</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Nombre d'items complétés</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>visible</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">true || false</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="_editItem"><span class="type-signature"></span>_editItem<span class="signature">(id, title)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="view.js.html">view.js</a>, <a href="view.js.html#line85">line 85</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    Affiche l'édition de l'élément à modifier
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">ID de l'élément à modifier</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>title</code></td>
             
 
             <td class="type">
             
                 
 <span class="param-type">string</span>
-|
-
-<span class="param-type">number</span>
-|
-
-<span class="param-type">object</span>
 
 
             
@@ -716,30 +723,7 @@ model.read({ foo: 'bar', hello: 'world' });</code></pre>
 
             
 
-            <td class="description last">Une requête pour comparer les modèles.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>callback</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">function</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">Le callback à lancer après que le modèle soit trouvé</td>
+            <td class="description last">Contenu de l'élément</td>
         </tr>
 
     
@@ -769,7 +753,7 @@ model.read({ foo: 'bar', hello: 'world' });</code></pre>
 
     
 
-    <h4 class="name" id="remove"><span class="type-signature"></span>remove<span class="signature">(id, callback)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="_editItemDone"><span class="type-signature"></span>_editItemDone<span class="signature">(id, title)</span><span class="type-signature"></span></h4>
 
     
 
@@ -781,7 +765,7 @@ model.read({ foo: 'bar', hello: 'world' });</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="model.js.html">model.js</a>, <a href="model.js.html#line75">line 75</a>
+        <a href="view.js.html">view.js</a>, <a href="view.js.html#line108">line 108</a>
     </li></ul></dd>
     
 
@@ -821,7 +805,7 @@ model.read({ foo: 'bar', hello: 'world' });</code></pre>
 
 
 <div class="description usertext">
-    Supprime un modèle de stockage
+    Remplace l'ancien élément par le nouveau
 </div>
 
 
@@ -875,20 +859,20 @@ model.read({ foo: 'bar', hello: 'world' });</code></pre>
 
             
 
-            <td class="description last">L'ID du modèle à supprimer</td>
+            <td class="description last">ID de l'élément édité</td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>callback</code></td>
+                <td class="name"><code>title</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">function</span>
+<span class="param-type">string</span>
 
 
             
@@ -898,7 +882,7 @@ model.read({ foo: 'bar', hello: 'world' });</code></pre>
 
             
 
-            <td class="description last">La fonction de rappel à lancer lorsque la suppression est terminée.</td>
+            <td class="description last">nouveau contenu de l'élément</td>
         </tr>
 
     
@@ -928,7 +912,7 @@ model.read({ foo: 'bar', hello: 'world' });</code></pre>
 
     
 
-    <h4 class="name" id="removeAll"><span class="type-signature"></span>removeAll<span class="signature">(callback)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="_elementComplete"><span class="type-signature"></span>_elementComplete<span class="signature">(id, completed)</span><span class="type-signature"></span></h4>
 
     
 
@@ -940,7 +924,7 @@ model.read({ foo: 'bar', hello: 'world' });</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="model.js.html">model.js</a>, <a href="model.js.html#line85">line 85</a>
+        <a href="view.js.html">view.js</a>, <a href="view.js.html#line66">line 66</a>
     </li></ul></dd>
     
 
@@ -980,144 +964,7 @@ model.read({ foo: 'bar', hello: 'world' });</code></pre>
 
 
 <div class="description usertext">
-    WARNING: Supprimera toutes les données du stockage.
-</div>
-
-
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>callback</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">function</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">Le rappel à déclencher lorsque le stockage est effacé.</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="update"><span class="type-signature"></span>update<span class="signature">(id, data, callback)</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="model.js.html">model.js</a>, <a href="model.js.html#line63">line 63</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description usertext">
-    Met à jour un modèle en lui donnant un ID, des données et un callback lorsque
-la mise à jour est complète.
+    Vérifie si l'élément est terminé
 </div>
 
 
@@ -1171,14 +1018,150 @@ la mise à jour est complète.
 
             
 
-            <td class="description last">L'identifiant du modèle à mettre à jour.</td>
+            <td class="description last">ID de l'élément à vérifier</td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>data</code></td>
+                <td class="name"><code>completed</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">status de l'élément</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="_itemId"><span class="type-signature"></span>_itemId<span class="signature">(element)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="view.js.html">view.js</a>, <a href="view.js.html#line179">line 179</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    Attribue un ID à un élément
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>element</code></td>
             
 
             <td class="type">
@@ -1194,14 +1177,399 @@ la mise à jour est complète.
 
             
 
-            <td class="description last">Les propriétés à mettre à jour et leur nouvelle valeur.</td>
+            <td class="description last">L'élément actif</td>
         </tr>
 
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="_removeItem"><span class="type-signature"></span>_removeItem<span class="signature">(id)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="view.js.html">view.js</a>, <a href="view.js.html#line31">line 31</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    Supprimer un todo en utilisant son ID
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
     
 
         <tr>
             
-                <td class="name"><code>callback</code></td>
+                <td class="name"><code>id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Id de l'item à supprimer</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="_setFilter"><span class="type-signature"></span>_setFilter<span class="signature">(currentPage)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="view.js.html">view.js</a>, <a href="view.js.html#line55">line 55</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    Filtre un todo en utilisant sa classe
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>currentPage</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">'' || active || completed</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="bind"><span class="type-signature"></span>bind<span class="signature">(event, handler)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="view.js.html">view.js</a>, <a href="view.js.html#line232">line 232</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    Se lie à <a href="Controller.html">Controller</a> fonctions avec <a href="View.html">View</a> events
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>event</code></td>
             
 
             <td class="type">
@@ -1217,7 +1585,189 @@ la mise à jour est complète.
 
             
 
-            <td class="description last">La fonction de rappel à lancer lorsque la mise à jour est terminée.</td>
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>handler</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="render"><span class="type-signature"></span>render<span class="signature">(viewCmd, parameter)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="view.js.html">view.js</a>, <a href="view.js.html#line131">line 131</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    Rendre une commande spécifique
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>viewCmd</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">La commande que nous voulons rendre</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>parameter</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Paramètres de cette commande</td>
         </tr>
 
     

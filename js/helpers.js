@@ -4,17 +4,17 @@
   "use strict";
 
   /**
-   * Obtenir un élément(s) par un sélecteur class CSS.
+   * Obtenir un élément(s) par un sélecteur CSS qs = querySelector.
    * Utiliser dans {@link View}.
-   *@function Helpers#qs
+   * @function Helpers#qs
    */
   window.qs = function (selector, scope) {
     return (scope || document).querySelector(selector);
   };
 
   /**
-   * Récupère un tableau des éléments en fonction de leur class CSS
-   *  Utiliser dans {@link View}.
+   * Obtenir un élément(s) par un sélecteur CSS qsa = querySelectorAll.
+   * Utiliser dans {@link View}.
    * @function Helpers#qsa
    */
   window.qsa = function (selector, scope) {
@@ -30,7 +30,6 @@
    * @param {Object} useCapture l'élément capturé
    * @function Helpers#$on
    */
-
   window.$on = function (target, type, callback, useCapture) {
     target.addEventListener(type, callback, !!useCapture);
   };
@@ -72,7 +71,6 @@
    * @param {string} (tagName) le tagName de l'élémnent
    * @function Helpers#$parent
    */
-
   window.$parent = function (element, tagName) {
     if (!element.parentNode) {
       return;
