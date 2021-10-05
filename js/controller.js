@@ -4,8 +4,8 @@
   /**
    * Le controller permet d'interagir entre la View et le Model
    * @constructor Controller
-   * @param {object} model The model instance
-   * @param {object} view The view instance
+   * @param {object} model L'instance du modèle
+   * @param {object} view L'instance de vue
    */
   function Controller(model, view) {
     var self = this;
@@ -102,7 +102,7 @@
 
     var self = this;
 
-    if (title.trim() !== "") {
+    if (title.trim() === "") {
       return;
     }
     self.model.create(title, function () {
@@ -207,10 +207,6 @@
       self._filter();
     }
   };
-
-  /**
-   *
-   */
 
   /**
    * Basculera l'état activation / désactivation des cases à cocher
